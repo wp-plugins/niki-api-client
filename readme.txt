@@ -1,5 +1,5 @@
 === Niki API Client ===
-Contributors: (this should be a list of wordpress.org userid's)
+Contributors: hzegwaard
 Donate link: http://fundament.nl/
 Tags: niki rest api, api, client
 Requires at least: 3.0.1
@@ -28,10 +28,10 @@ following functionality:
  
  Of course, these are example implementations, not ment for direct production use. They will point you in the right direction while
  implementing your own Niki-data filled website.
- 
+
 == Installation ==
 
-# From your WordPress dashboard
+= From your WordPress dashboard =
 1. Visit 'Plugins > Add New'
 2. Search for 'Niki API client'
 3. Activate the plugin through the 'Plugins' menu in WordPress
@@ -42,7 +42,7 @@ following functionality:
 8. When the token is retrieved, under `Niki projecten` check the relevant projects and click `Wijzigingen opslaan`
 9. You are now ready to use the Niki data in your Wordpress site.
 
-# From WordPress.org
+= From WordPress.org =
 1. Download Niki API client
 2. Upload the plugin folder to the `/wp-content/plugins/` directory using your favorite method (ftp, sftp, scp, etc...)
 3. Activate the plugin through the 'Plugins' menu in WordPress
@@ -53,7 +53,7 @@ following functionality:
 8. When the token is retrieved, under `Niki projecten` check the relevant projects and click `Wijzigingen opslaan`
 9. You are now ready to use the Niki data in your Wordpress site.	 
 
-# Installing the example theme
+= Installing the example theme =
 1. Using FTP, copy the folder /examples/theme/niki-template to your themes folder
 2. Go to your admin dashboard http://www.yoursite.nl/wp-admin
 3. Under display->theme's, click 'activate' on item 'Niki Template'
