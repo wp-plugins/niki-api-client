@@ -3,7 +3,7 @@
 Plugin Name: Niki API Client
 Plugin URI: http://niki.nl
 Description: De Niki API Client vormt een interface naar de Niki database API die makkelijk in een WordPress site gebruikt kan worden, bijvoorbeeld m.b.v. een template.
-Version: 0.1
+Version: 0.2
 Author: Fundament All Media
 Author URI: http://www.fundament.nl
 License: GPL2
