@@ -235,46 +235,45 @@ abstract class Niki_Plugin_Base implements Plugin_Activation {
 
 			$this->log( 'Niki_plugin construction: hooking admin_init', 1 );
 			add_action( 'admin_init', array ( &$this, 'niki_admin_init' ) );
-		} else {
-			// For non-admin: if there is an API token, setup a Niki_API instance for use to get resources from the Niki API.
-			// Note that the Niki_API instance retrieves the access token from the database itself.
-			if ( $this->get_api_token() !== false ) {
-				$options = get_option( self::OPTION_NAME_SERVER, false );
+		} 
+		// Note that the Niki_API instance retrieves the access token from the database itself.
+		if ( $this->get_api_token() !== false ) {
+			$options = get_option( self::OPTION_NAME_SERVER, false );
 
-				if ( false !== $options ) {
-					$api_options = array(
-							'api_url' => $options['api_url'],
-							'client_id' => $_SERVER[ "SERVER_NAME" ],
-							'debug' => min( $this->debug, 0 )
-					);
+			if ( false !== $options ) {
+				$api_options = array(
+						'api_url' => $options['api_url'],
+						'client_id' => $_SERVER[ "SERVER_NAME" ],
+						'debug' => min( $this->debug, 0 )
+				);
 
-					if ( WP_DEBUG && ( $this->debug > 0 ) ) {
-						$this->log( "creating new Niki_API instance", 1 );
-						foreach ( $api_options as $k => $v ) {
-							$this->log( "API options [$k] => $v", 1 );
-						}
+				if ( WP_DEBUG && ( $this->debug > 0 ) ) {
+					$this->log( "creating new Niki_API instance", 1 );
+					foreach ( $api_options as $k => $v ) {
+						$this->log( "API options [$k] => $v", 1 );
 					}
-					$this->niki_api = new Niki_API( $api_options );
-					$this->log( "Niki_API instance created" );
-
-					$projects_options = get_option( self::OPTION_NAME_PROJECTS, array() );
-					foreach ( $projects_options as $project ) {
-						if ( $project ['active'] ) {
-							$this->projects[] = array (
-									'name' => $project ['name'],
-									'link' => $project ['link']
-							);
-							$this->log( "Added active project (link='{$project ['link']}')" );
-						}
-					}
-				} else {
-					$this->log( "no server settings found!" );
 				}
+				$this->niki_api = new Niki_API( $api_options );
+				$this->log( "Niki_API instance created" );
+
+				$projects_options = get_option( self::OPTION_NAME_PROJECTS, array() );
+				foreach ( $projects_options as $project ) {
+					if ( $project ['active'] ) {
+						$this->projects[] = array (
+								'name' => $project ['name'],
+								'link' => $project ['link']
+						);
+						$this->log( "Added active project (link='{$project ['link']}')" );
+					}
+				}
+			} else {
+				$this->log( "no server settings found!" );
 			}
-
-			add_filter( 'query_vars', array( &$this, 'base_add_query_vars' ) );
-
 		}
+
+		add_filter( 'query_vars', array( &$this, 'base_add_query_vars' ) );
+
+		
 		$this->log( 'construction ready', 1 );
 	}
 

@@ -4,7 +4,7 @@ Donate link: http://fundament.nl/
 Tags: niki rest api, api, client
 Requires at least: 3.0.1
 Tested up to: 4.1.1
-Stable tag: 0.2
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -113,6 +113,8 @@ var_dump($myProject);
 `
 
 == Changelog ==
+= 0.2.1 = 
+Always initialize niki object in contructor for global accessing of plugin.
 
 = 0.1 =
 Initial Release
