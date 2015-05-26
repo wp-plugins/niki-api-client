@@ -1,0 +1,94 @@
+/*
+ Theme Name:   Niki Template
+ Theme URI:    http://www.fundament.nl/
+ Description:  Example Niki pages, showing some basic functionality for using the Niki API plugin.
+ Author:       Fundament All Media B.V.
+ Author URI:   http://www.fundament.nl
+ Template:     twentyfifteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         Niki API, twentyfifteen
+ Text Domain:  niki-template
+*/
+
+.error {
+	background: #f6acb7;
+	color: red;
+	float: left;
+    width: 50%;
+    padding: 5px 15px;
+    margin: 0 15px;
+}
+
+#housetypes-overview-title,
+#interest-overview-title,
+#housetype-detail-title,
+#housetype-pricelist,
+.interest-overview-subtitle,
+.housetype-detail-subtitle,
+p {
+	margin-left: 10px;
+}
+
+#housetype-pricelist {
+	font-size: 10pt;
+}
+
+.housetype-party-details {
+	font-size: 10pt;
+	margin-left: 10px;
+	list-style: none;
+}
+
+p {
+	margin-bottom: 10px;
+	font-size: 10pt;
+}
+
+#interest-overview,
+#housetypes-overview
+#housetype-overview {
+	font-size: 10pt;
+	width: 100%;
+}
+
+.interest-row,
+.interest-housetype-row,
+.housetype-row {
+ 	width: 100%;
+ 	padding: 5px 15px;
+ 	border-bottom: 1px solid #ccc;
+ 	float: left;
+ 	margin-bottom: 10px;
+}
+
+.interest-submit-row {
+ 	width: 100%;
+ 	padding: 5px 15px;
+	float: left;
+ 	margin-bottom: 10px;
+}
+
+.housetype-title {
+	margin-bottom: 10px;
+	font-size: 12pt;
+}
+
+.housetype-title a {
+	text-decoration: underline;
+}
+
+.interest-housetype-image,
+.housetype-image {
+	width: 30%;
+	float: left;
+}
+
+.interest-housetype-description,
+.housetype-description {
+	width: 70%;
+	float: left;
+	font-size: 10pt;
+}
+
