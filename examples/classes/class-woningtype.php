@@ -66,12 +66,13 @@ class Woningtype {
 					self::log( "housetype [$field] => " . str_replace( "\n", "&para;", print_r( $value, true ) ) );
 				}
 			}
-
+			
+			echo '<div id="housetype-detail-overview">', PHP_EOL;
 			echo '<h1 id="housetype-detail-title">Woningtype: ' . $housetype ['name'] . '</h1>', PHP_EOL;
 
 			$images = $housetype ['images'];
 			if ( is_array( $images ) ) {
-				echo "<p>", PHP_EOL;
+				echo '<div id="housetype-detail-images">', PHP_EOL;
 				foreach ( $images as $image ) {
 					if ( is_array( $image ) ) {
 						$image = $image ['sizes'] ['thumb'];
@@ -86,7 +87,7 @@ class Woningtype {
 						}
 					}
 				}
-				echo "</p>", PHP_EOL;
+				echo "</div>", PHP_EOL;
 			}
 
 			echo '<div id="housetype-overview">', PHP_EOL;
@@ -299,6 +300,8 @@ class Woningtype {
 			}
 			echo "</ul>";
 		}
+		
+		echo "</div>", PHP_EOL;
 	}
 
 	/**
