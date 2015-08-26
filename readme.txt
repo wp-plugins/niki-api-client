@@ -1,5 +1,5 @@
 === Niki API Client ===
-Contributors: hzegwaard
+Contributors: hzegwaard, jurgen_fundament
 Donate link: http://fundament.nl/
 Tags: niki rest api, api, client
 Requires at least: 3.0.1
