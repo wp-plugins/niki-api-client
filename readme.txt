@@ -113,6 +113,9 @@ var_dump($myProject);
 `
 
 == Changelog ==
+= 0.2.3 =
+Added Jurgen to contributors
+
 = 0.2.2 = 
 Added extra div to detailpage for additional styling options.
 
